@@ -88,7 +88,6 @@ The project aims to develop a heart disease prediction system using advanced alg
 ## Output
 
 The system generates a user-friendly interface where users can input health parameters and receive a prediction of their heart disease risk. The result page displays the risk assessment and suggests heart health tips.
-![image](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/aff347eb-7c2e-4e6e-a224-1f20573f0eec)
 ![image](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/d383b27b-303d-4a8e-bf15-540c0cb77582)
 ![image](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/f6e3a574-3d72-4925-94ab-7c4b32c6b49a)
 ![image](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/17986541-6c65-4262-b792-53c713e44906)
@@ -96,6 +95,7 @@ The system generates a user-friendly interface where users can input health para
 ![image](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/94460a19-b503-4608-a04d-155c4762c10a)
 
 ![image](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/2e07fa04-984a-4621-b1d3-da829a280257)
+![image](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/aff347eb-7c2e-4e6e-a224-1f20573f0eec)
 ![image](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/317a81c6-c08e-4e62-8313-81b18ac46f43)
 
 
