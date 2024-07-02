@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://api.time.com/wp-content/uploads/2020/02/GettyImages-1071551122.jpg?');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        #prediction-result{
+            background-color: #007BFF;
+            color: white;
+            border-radius: 20px;
+            padding: 15px;
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            color:yellow;
+        }
+
+        label {
+            font-weight: bolder;
+            color:white;
+            font-size:18px
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #prediction-result {
+            display: none;
+          }
+          
+          input[type="submit"] {
+            cursor: pointer;
+          }
+          
+          input[type="submit"]:hover {
+            background-color: #ccc;
+          }
+        
+    </style>
+    <script>
+        const oldpeakInput = document.getElementById('oldpeak');
+
+// Add a listener for the `change` event
+oldpeakInput.addEventListener('change', function() {
+  // Round the value to the nearest integer
+  const roundedValue = Math.round(oldpeakInput.value);
+
+  // Set the input value to the rounded value
+  oldpeakInput.value = roundedValue;
+});
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>Heart Disease Prediction</h1>
+    <form id="prediction-form">
+      
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+        <label for="sex">Sex (1 for Male, 0 for Female):</label>
+        <input type="number" id="sex" name="sex" placeholder="Enter sex" required>
+
+        <label for="cp">Chest Pain Type (0 to 3):</label>
+        <input type="number" id="cp" name="cp" placeholder="Enter chest pain type" min="0" max="3" required>
+
+        <label for="trestbps">Resting Blood Pressure (mmHg 90 to 220):</label>
+        <input type="number" id="trestbps" name="trestbps" min="90" max="220" placeholder="Enter resting blood pressure" required>
+
+        <label for="chol">Cholesterol (mg/dl 120 to 560):</label>
+        <input type="number" id="chol" name="chol" min="110" max="580" placeholder="Enter cholesterol level" required>
+
+        <label for="fbs">Fasting Blood Sugar &gt; 120 mg/dl (1 for Yes, 0 for No):</label>
+        <input type="number" id="fbs" name="fbs" placeholder="Enter fasting blood sugar" required>
+
+        <label for="restecg">Resting Electrocardiographic Results (0 to 2):</label>
+        <input type="number" id="restecg" name="restecg" placeholder="Enter resting ECG result" required>
+
+        <label for="thalach">Maximum Heart Rate Achieved:(70 to 570)</label>
+        <input type="number" id="thalach" name="thalach" min="70" max="570" max="7.0"  placeholder="Enter maximum heart rate achieved" required>
+
+        <label for="exang">Exercise-Induced Angina (1 for Yes, 0 for No):</label>
+        <input type="number" id="exang" name="exang" min="0" max="1" placeholder="Enter exercise-induced angina">
+
+        <label for="oldpeak">ST Depression Induced by Exercise:(0 to 1)</label>
+        <input type="number" id="oldpeak" name="oldpeak" placeholder="Enter ST depression value" min="0" max="1">
+
+        <label for="slope">Peak Exercise ST Segment (0 to 2):</label>
+        <input type="number" id="slope" min="0" max="2" name="slope" placeholder="Enter peak exercise ST segment" required>
+
+        <label for="ca">Number of Major Vessels Colored by Fluoroscopy (0 to 4):</label>
+        <input type="number" id="ca" name="ca" min="0" max="4" placeholder="Enter number of vessels colored" required>
+
+        <label for="thal">Thalassemia (0 to 3):</label>
+        <input type="number" id="thal" min="0" max="3" name="thal" placeholder="Enter thalassemia value" required>
+
+        <input type="submit" value="Predict" onclick="showPredictionResult()">
+<br><br>
+    </form>
+    <div id="prediction-result"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#prediction-form").submit(function (event) {
+            event.preventDefault(); // Prevent the form from submitting in the default way
+            console.log("Form submitted");
+            // Gather the input data
+            var input_data = {
+                "age": $("#age").val(),
+                "sex": $("#sex").val(),
+                "cp": $("#cp").val(),
+                "trestbps": $("#trestbps").val(),
+                "chol": $("#chol").val(),
+                "fbs": $("#fbs").val(),
+                "restecg": $("#restecg").val(),
+                "thalach": $("#thalach").val(),
+                "exang": $("#exang").val(),
+                "oldpeak": $("#oldpeak").val(),
+                "slope": $("#slope").val(),
+                "ca": $("#ca").val(),
+                "thal": $("#thal").val()
+            };
+
+            // Send a POST request to the /predict endpoint with JSON data
+            $.ajax({
+                type: "POST",
+                url: "/train",
+                data: JSON.stringify(input_data),
+                contentType: "application/json", // Set the Content-Type header to JSON
+                dataType: "json", // Expect JSON in response
+                success: function (response) {
+                    // Display the prediction result
+                    $("#prediction-result").text(response.prediction);
+                },
+                error: function () {
+                    alert("An error occurred while making the prediction.");
+                }
+            });
+        });
+    });
+    function showPredictionResult() {
+        document.getElementById('prediction-result').style.display = 'block';
+      }
+</script>
+</body>
+</html>

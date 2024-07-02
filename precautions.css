@@ -1,0 +1,36 @@
+
+img {
+    height: 200px;
+    width: 250px;
+    display: block;
+    flex: 0 0 auto;
+    border: 1px solid black;
+    border-radius: 2%;
+}
+body {
+  background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpVJcGajV2jhK9ktb1YjKicAdSL-ae3Qf-ZA&usqp=CAU);
+  background-size: cover;
+}
+#images{
+    position: absolute;
+    left: 900px;
+    width: 200px; 
+    float: right;
+    margin-top: -1000px;
+}
+.image-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .image-row img {
+    height: 250px;
+    width: 250px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+   
+  }
+#precautions{
+    height: 100%;
+    width: 70%;
+}
