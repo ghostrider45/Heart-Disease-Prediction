@@ -93,9 +93,9 @@ The system generates a user-friendly interface where users can input health para
 ![image](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/17986541-6c65-4262-b792-53c713e44906)
 ![image](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/3526bebb-7356-49e9-aea9-351a5ee4e815)
 ![image](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/94460a19-b503-4608-a04d-155c4762c10a)
-
-![image](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/2e07fa04-984a-4621-b1d3-da829a280257)
 ![image](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/aff347eb-7c2e-4e6e-a224-1f20573f0eec)
+![image](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/2e07fa04-984a-4621-b1d3-da829a280257)
+
 
 
 ## Future Scope
