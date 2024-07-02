@@ -1,4 +1,4 @@
-![image](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/07cdc1a3-b892-404f-845a-6002a11a41d7)![image](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/bbeb3b82-1964-48f9-a729-3fefded2b245)# Heart Disease Prediction System
+ Heart Disease Prediction System
 
 ## Project Overview
 
