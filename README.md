@@ -110,15 +110,17 @@ The system generates a user-friendly interface where users can input health para
 
 Heart disease is a significant health issue, and early detection is crucial. Our system, with an accuracy of up to 90%, helps identify at-risk individuals, providing a valuable tool for healthcare professionals.
 
-Logistic Regression 
+### Logistic Regression 
+
 ![Logistic Regression](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/bcf5767d-c130-4576-bba5-1617e0550a76)
 
-Random Forest
+### Random Forest
+
 ![Random Forest](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/74c13d6d-31c4-4066-876c-0f6f96472f4f)
 
-Support Vector Machine
-![Support Vector Machine](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/e92f63de-20ba-4164-a359-ba1ff32b161b)
+### Support Vector Machine
 
+![Support Vector Machine](https://github.com/ghostrider45/Heart-Disease-Prediction/assets/98375431/e92f63de-20ba-4164-a359-ba1ff32b161b)
 ## References
 
 1. Soni J, Ansari U, Sharma D, & Soni S. (2011). Predictive data mining for medical diagnosis: an overview of heart disease prediction. International Journal of Computer Applications, 17(8), 43-8.
