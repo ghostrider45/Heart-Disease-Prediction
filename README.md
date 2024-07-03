@@ -1,6 +1,4 @@
-Here's the revised README file with images aligned to follow the text:
 
----
 
 # Heart Disease Prediction System
 
